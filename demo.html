@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+<meta charset=utf-8 />
+<meta name="author" content="Nathan Ford" />
+
+<title>Google Fonts - Subsetting Test</title>
+
+<link href="./css/style.css" rel="stylesheet" />
+
+<style>
+
+	/* Reset ---------------------------------------- */
+	
+	html, body, div, span, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	abbr, address, cite, code,
+	del, dfn, em, img, ins, kbd, q, samp,
+	small, strong, sub, sup, var,
+	b, i,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, figcaption, figure, 
+	footer, header, hgroup, menu, nav, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+	
+	html {
+		font-size: 62.5%;
+	}
+	
+	article,aside,details,figcaption,figure,
+	footer,header,hgroup,menu,nav,section { 
+		display: block;
+	}
+	
+	nav ul {
+		list-style: none;
+	}
+	
+	blockquote, q {
+		quotes: none;
+	}
+	
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none;
+	}
+	
+	a {
+		margin: 0;
+		padding: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+	
+	ins {
+		background-color: #ff9;
+		color: #000;
+		text-decoration: none;
+	}
+	
+	mark {
+		background-color: #ff9;
+		color: #000; 
+		font-style: italic;
+		font-weight: bold;
+	}
+	
+	del {
+		text-decoration: line-through;
+	}
+	
+	abbr[title], dfn[title] {
+		border-bottom: 1px dotted;
+		cursor: help;
+	}
+	
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+	img{
+		width: 100%;
+		max-width: 100%;
+	}
+	
+	/* change border colour to suit your needs */
+	hr {
+		display: block;
+		height: 1px;
+		border: 0;   
+		border-top: 1px solid #cccccc;
+		margin: 1em 0;
+		padding: 0;
+	}
+	
+	input, select {
+		vertical-align:middle;
+	}
+	
+	/* Clearfix -------------------------------- */
+	/* More info: http://nicolasgallagher.com/micro-clearfix-hack/
+	
+	For modern browsers */
+	.clearfix:before,
+	.clearfix:after {
+	    content: "";
+	    display: table;
+	}
+	
+	.clearfix:after {
+	    clear: both;
+	}
+	
+	/* For IE 6/7 (trigger hasLayout) */
+	.clearfix {
+	    zoom:1;
+	}
+	
+	/* General Typography & Layout ------------------------------ */
+	
+	body {
+		padding: 10%;
+		background: #eee;
+		font-size: 16px;
+	}
+	
+	
+	#myCanvas {
+		background-color: #fff;
+	}
+	
+	body {
+		font-family: 'Open Sans', monospace;
+		font-size: 18px;
+		line-height: 1.6;
+	}
+	
+	h1 {
+		margin-bottom: 0.2em;
+		font-size: 2em;
+	}
+	
+	h2 {
+		margin: 1em 0;
+	}
+	
+	h3 {
+		margin-top: 1em;
+	}
+	
+	ul, ol {
+		margin: 1em 0;
+	}
+	
+	h4 {
+		margin-bottom: 1em;
+	}
+	
+</style>
+
+</head>
+<body>
+  
+	<article>
+		
+		<header id="article-header">
+		
+			<h1>Pursuing Better Fluid Layouts</h1>
+			
+			<h4 class="details">a post on <a href="javascript:" rel="process">Process</a></h4>
+		
+		</header>
+		
+		<div class="text-area a1 am1 lead-in">
+		
+			<p><small><span>04/04/14</span> &middot; Penarth, Wales &middot;</small> Sometime last Spring I started realizing that grid-based design was getting in the way of good fluid layout. The evidence kept hitting me in the face every time some big commercial site relaunched with a responsive design. At first blush, all would seem orderly, but after tugging at the corners a bit, and scrolling deeper into the content, I&rsquo;d see cracks surfacing in the underlying structure. The grids were not holding up.</p>
+			
+			<p>This was troubling, mostly because I run an app called <a href="https://gridsetapp.com" title="Go to gridsetapp.com"><em>Grid</em>set</a>. I&rsquo;m kinda invested in grids. Yet everyday more evidence was launching that, to me, indicted grid-based design as incompatible with a fluid canvas. But grids, as a tool, have all sorts of well established benefits. Can they be salvaged? Can we adapt grid methods for a fluid canvas?</p>
+		
+		</div>
+		
+		<div class="text-area a2 am2">
+		
+			<p>I have long thought <a href="http://www.markboulton.co.uk/journal/anewcanon" title="Go read this">Mark Boulton&rsquo;s &ldquo;New Canon&rdquo;</a> was the perfect foundation for a new approach to layout. I&rsquo;ve also wanted to explore Gridset&rsquo;s ratio features in more depth. I built them in as a bit of a lark, but the possibilities I saw were intriguing. To explore these ideas, I developed a rather unique workflow:</p>
+			
+			<ol>
+				<li>I first tried designing a layout from the content out. Instead of using columns, I used ratios to define the sizes. Gridset helped immensely with this, but I would often encounter limitations to how I wanted to work, so&hellip;</li>
+				<li>I would adapt Gridset&rsquo;s UI and output to match this method, making sure not to destroy any current methods. I took it as a good sign that the changes I made were also opening Gridset to more of what is possible with CSS and Media Queries. <a href="https://gridsetapp.com/blog/one-year-one-massive-update/" title="A Gridset post about some of these changes">More flexibility! More units! Ems!</a></li>
+				<li>As I went, I&rsquo;d write about <a href="https://gridsetapp.com/blog/grids-anywhere/" title="Another Gridset post about changes">what I learned</a>, continually looping through these steps until I had a process, tool, and output that felt right; that felt <em>aligned</em>.</li>
+			</ol>
+			
+			<p>There was more to it: rifling through old books, magazines, and blog posts, looking for validation, but those three points sum it up well. The results of this effort has definitely been rewarding. I&rsquo;ve published articles in a couple of my favorite web haunts, and I even been given the opportunity to tell people about my thoughts on fluid layout &ndash; <em>with my voice</em> &ndash; at amazing events like <a href="http://smashingconf.com/oxford-2014/" title="Visit Smashing Conference">SmashingConf Oxford</a> last month, and <a href="http://port80events.co.uk/" title="Visit Port 80">Port 80 coming up in May</a>.</p>
+		
+		</div>
+			
+		<h2 class="a1 am1 outdent">Here is a roundup of my recent contributions:</h2>
+		
+		<div class="text-area a2 am2">
+			
+			<h3><a href="http://blog.typekit.com/2014/02/26/deriving-layout-from-your-typeface/" title="View this article">Deriving layout from your typeface</a></h3>
+			<p><small><span>26/02/14</span> &middot; <a href="http://blog.typekit.com/" title="Visit The Typekit Blog">The Typekit Blog</a> &middot;</small> Three layout exploration based on three outstanding typefaces served by Typekit. In this, I really push this new content-out method to find how far we can take it.</p>
+			
+			<h3><a href="http://alistapart.com/article/content-out-layout" title="View this article">Content-out Layout</a></h3>
+			<p><small><span>25/03/14</span> &middot; <a href="http://alistapart.com/" title="Visit A List Apart">A List Apart</a> &middot;</small> All of the theory and mathematics of a content-out, ratio-based layout approach explained. I define some aspects of this method, here, and identify how to recognize when a fluid layout is breaking down.</p>
+			
+			<h3><a href="http://alistapart.com/blog/post/content-out-layout-the-resources" title="View this article">Content-out Layout: The Resources</a></h3>
+			<p><small><span>31/03/14</span> &middot; <a href="http://alistapart.com/blog" title="Visit The A List Apart Blog">The A List Apart Blog</a> &middot;</small> A deep dive into the resources I used to guide a content-out method that leveraged ratios while maintaining the benefits of grid systems as we know them.</p>
+			
+			<h3><a href="https://gridsetapp.com/blog/content-out-grid-system/" title="View this article">Build a Content-out Grid System with Gridset</a></h3>
+			<p><small><span>03/04/14</span> &middot; <a href="https://gridsetapp.com/blog/" title="Visit the Gridset Blog">Gridset Blog</a> &middot;</small> A detailed tutorial of how to build a content-out, ratio-based grid system in Gridset, using all of the shiny new features we&rsquo;ve added in the last year.</p>
+			
+		</div>
+		
+	</article>
+	
+	<script src="google-ds.js"></script>
+	
+	<script>
+	
+		googleDS('Open Sans', '400,600');
+	
+	</script>
+   
+</body>
+</html>
