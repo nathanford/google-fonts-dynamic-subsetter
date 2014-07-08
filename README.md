@@ -6,7 +6,7 @@ Dynamically subset your Google Font based on the glyphs used on a single page.
 Check out demo.html for an example set up.
 
 To initialize:
-@@@
+```HTML
 <script src="google-ds.js"></script>
 	
 <script>
@@ -14,9 +14,9 @@ To initialize:
   googleDS(_'font name'_, _'font weights'_, _subset_);
 	
 </script>
-@@@
+```
 
-The script will write a @link@ element to the @head@ of your page, with the font, weights and subsets supplied in the parameters of the @googleDS@ function:
+The script will write a `link` element to the `head` of your page, with the font, weights and subsets supplied in the parameters of the `googleDS` function:
 
 _font name (required)_
 The name of the font, as listed on google.com/fonts. Ex: 'Open Sans'.
