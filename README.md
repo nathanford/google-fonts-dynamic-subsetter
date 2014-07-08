@@ -11,7 +11,7 @@ To initialize:
 	
 <script>
 	
-  googleDS(_'font name'_, _'font weights'_, _subset_);
+  googleDS('font name', 'font weights', subset);
 	
 </script>
 ```
